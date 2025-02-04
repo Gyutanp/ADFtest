@@ -1,0 +1,25 @@
+{
+	"name": "trigger1",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Stopped",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "pipeline1",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "BlobEventsTrigger",
+		"typeProperties": {
+			"blobPathBeginsWith": "/container1/blobs/",
+			"ignoreEmptyBlobs": true,
+			"scope": "/subscriptions/4f220d78-570c-4d51-af9b-64220b582e07/resourceGroups/CASE_storage2501290030001929_a/providers/Microsoft.Storage/storageAccounts/storage2501290030001929",
+			"events": [
+				"Microsoft.Storage.BlobCreated",
+				"Microsoft.Storage.BlobDeleted"
+			]
+		}
+	}
+}
